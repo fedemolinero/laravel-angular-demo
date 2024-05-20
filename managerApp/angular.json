@@ -76,6 +76,9 @@
             "production": {
               "buildTarget": "managerApp:build:production"
             },
+            "options": {
+              "proxyConfig": "src/proxy.conf.json"
+            },
             "development": {
               "buildTarget": "managerApp:build:development"
             }
