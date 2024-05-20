@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
+use Carbon\Carbon;
 
 class DatabaseSeeder extends Seeder
 {
@@ -101,6 +102,31 @@ class DatabaseSeeder extends Seeder
 
         foreach ($empresas as $empresa) {
             DB::table('empresas')->insert($empresa);
+        }
+
+
+        // Datos de ejemplo para las posiciones
+        $posiciones = [
+            [
+                'idEmpresa' => 1,
+                'idProducto' => 1,
+                'fechaEntregaInicio' => Carbon::now()->subDays(10),
+                'moneda' => 'USD',
+                'precio' => 100.50,
+            ],
+            [
+                'idEmpresa' => 2,
+                'idProducto' => 2,
+                'fechaEntregaInicio' => Carbon::now()->subDays(5),
+                'moneda' => 'USD',
+                'precio' => 85.75,
+            ],
+            // Agrega más datos aquí según sea necesario
+        ];
+
+        // Insertar los datos en la tabla
+        foreach ($posiciones as $posicion) {
+            DB::table('posiciones')->insert($posicion);
         }
     }
 }
