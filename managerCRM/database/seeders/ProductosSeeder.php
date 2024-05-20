@@ -2,13 +2,13 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
-class DatabaseSeeder extends Seeder
+class ProductosSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
@@ -74,7 +74,32 @@ class DatabaseSeeder extends Seeder
             [95, 'MINI TRIGO', 'No'],
             [96, 'CT ALGODON', 'No'],
             [97, 'MAIZ FLINT', 'No'],
-            [103, 'GARBANZO', 'No']
+            [103, 'GARBANZO', 'No'],
+            [104, 'POROTO MUNG', 'No'],
+            [105, 'ARVEJA VERDE', 'No'],
+            [106, 'EXPELLER', 'No'],
+            [47, 'FOSFATO DIAMONICO', 'No'],
+            [48, 'FOSFATO MONOAMONICO', 'No'],
+            [57, 'GLIFOSATO', 'No'],
+            [61, 'UREA GRANULADA', 'No'],
+            [62, 'UREA PERLADA', 'No'],
+            [63, 'GLIFOSATO ATANOR', 'No'],
+            [64, '2.4 D', 'No'],
+            [77, 'SUPER FOSFATO TRIPLE', 'No'],
+            [98, 'SUPER FOSFATO SIMPLE', 'No'],
+            [99, 'PANZER GOLD', 'No'],
+            [200, 'MEZCLA FISICA 7-40', 'No'],
+            [90, 'ACEITE DE SOJA', 'No'],
+            [80, 'HARINA SOJA', 'No'],
+            [91, 'HARINA DE SOJA HIPRO', 'No'],
+            [100, 'DOLAR', 'No'],
+            [101, 'DOLAR-MAT', 'No'],
+            [102, 'VARIOS', 'No'],
+            [103, 'GANADO', 'No'],
+            [104, 'GIRASOL ALTO OLEICO', 'Si'],
+            [105, 'VIENTRES', 'No'],
+            [106, 'INVERNADA', 'No'],
+            [107, 'GORDO', 'No'],
         ];
 
         foreach ($productos as $producto) {
