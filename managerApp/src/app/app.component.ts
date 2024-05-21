@@ -18,7 +18,8 @@ export class AppComponent implements OnInit {
   title = 'managerApp';
 
   name = "Angular " + VERSION.full;
-  url = "http://127.0.0.1:8000/api/tipo-producto";
+  url = "http://127.0.0.1:8000/api/productos";
+  url1 = "http://127.0.0.1:8000/api/posiciones";
 
   constructor(private http: HttpClient) { }
 
@@ -27,14 +28,13 @@ export class AppComponent implements OnInit {
   }
 
   datos: any;
+
   callApi() {
     this.http.get<any>(this.url)
       .subscribe(
         (datax: any) => {
-          this.datos = (datax);
+          console.log(datax)
         });
   }
-
-
 
 }
