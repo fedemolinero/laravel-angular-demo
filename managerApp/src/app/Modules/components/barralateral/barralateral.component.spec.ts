@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BarralateralComponent } from './barralateral.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('BarralateralComponent', () => {
   let component: BarralateralComponent;
@@ -8,7 +9,8 @@ describe('BarralateralComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [BarralateralComponent]
+      declarations: [BarralateralComponent],
+      imports:[HttpClientTestingModule]
     })
     .compileComponents();
     

@@ -2,6 +2,8 @@ export interface Posicion {
   id: number;
   idEmpresa: number;
   idProducto: number;
+  nombreEmpresa: string;
+  nombreProducto:string;
   fechaEntregaInicio: Date;
   moneda: string;
   precio: number;

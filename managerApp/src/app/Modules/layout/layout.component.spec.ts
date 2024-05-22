@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LayoutComponent } from './layout.component';
+import { BarralateralComponent } from '../components/barralateral/barralateral.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { PosicionesComponent } from '../components/posiciones/posiciones.component';
 
 describe('LayoutComponent', () => {
   let component: LayoutComponent;
@@ -8,10 +11,17 @@ describe('LayoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LayoutComponent]
+      declarations: [
+        LayoutComponent,
+        BarralateralComponent,
+        PosicionesComponent
+      ],
+      imports: [
+        HttpClientTestingModule
+      ]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(LayoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

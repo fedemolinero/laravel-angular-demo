@@ -11,6 +11,7 @@ import { ProductService } from "../../services/product.service";
 import { BarralateralComponent } from "../components/barralateral/barralateral.component";
 import { PosicionesComponent } from "../components/posiciones/posiciones.component";
 import { CompanyComponent } from "../components/company/company.component";
+import { PosicionService } from "../../services/posicion.service";
 
 @NgModule({
   imports: [
@@ -30,6 +31,7 @@ import { CompanyComponent } from "../components/company/company.component";
   ],
   providers: [
     ProductService,
+    PosicionService,
     CategoryService,
     provideHttpClient(withFetch()),
   ],
