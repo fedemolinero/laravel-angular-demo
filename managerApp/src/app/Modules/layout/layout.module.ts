@@ -9,6 +9,8 @@ import { CategoryService } from "../../services/category.service";
 import { ProductosComponent } from "../components/productos/productos.component";
 import { ProductService } from "../../services/product.service";
 import { BarralateralComponent } from "../components/barralateral/barralateral.component";
+import { PosicionesComponent } from "../components/posiciones/posiciones.component";
+import { CompanyComponent } from "../components/company/company.component";
 
 @NgModule({
   imports: [
@@ -22,7 +24,9 @@ import { BarralateralComponent } from "../components/barralateral/barralateral.c
   declarations: [
     LayoutComponent,
     BarralateralComponent,
-    ProductosComponent
+    ProductosComponent,
+    PosicionesComponent,
+    CompanyComponent
   ],
   providers: [
     ProductService,

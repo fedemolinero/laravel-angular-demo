@@ -41,8 +41,20 @@ export class BarralateralComponent implements OnInit, OnDestroy {
     );
   }
 
-  goBack() {
-    this.router.navigate(['']);
+  // goBack() {
+  //   this.router.navigate(['']);
+  // }
+
+  goEmpresas() {
+    this.router.navigate(['empresas']);
+  }
+  
+  goProductos() {
+    this.router.navigate(['productos']);
+  }
+  
+  goPosiciones() {
+    this.router.navigate(['posiciones']);
   }
 
 }

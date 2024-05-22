@@ -1,12 +1,16 @@
 <div class="list-group">
-
-  <button type="button" class="list-group-item list-group-item-action" (click)="goBack()">
+<!-- <button type="button" class="list-group-item list-group-item-action" (click)="goBack()">
     VOLVER
+  </button> -->
+  <button type="button" class="list-group-item list-group-item-action" (click)="goEmpresas()">
+    EMPRESAS
   </button>
-  <div *ngFor="let category of categories" >
-    <button type="button" class="list-group-item list-group-item-action" (click)="goBack()">
-      {{ category }}
-    </button>
-  </div>
+  <button type="button" class="list-group-item list-group-item-action" (click)="goPosiciones()">
+    POSICIONES
+  </button>
+  <button type="button" class="list-group-item list-group-item-action" (click)="goProductos()">
+    PRODUCTOS
+  </button>
+
 
 </div>
