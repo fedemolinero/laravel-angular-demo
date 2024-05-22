@@ -15,6 +15,10 @@ export class PosicionService {
   getPosicion(): Observable<Posicion[]> {
     return this.http.get<Posicion[]>(this.apiUrl);
   }
+
+  savePosicion(dataSave: any): Observable<Posicion[]> {
+    return this.http.post<any>(this.apiUrl, dataSave)
+  };
   
 }
 

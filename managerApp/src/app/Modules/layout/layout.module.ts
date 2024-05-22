@@ -12,6 +12,7 @@ import { BarralateralComponent } from "../components/barralateral/barralateral.c
 import { PosicionesComponent } from "../components/posiciones/posiciones.component";
 import { CompanyComponent } from "../components/company/company.component";
 import { PosicionService } from "../../services/posicion.service";
+import { CreatePosicionComponent } from "../components/posiciones/createposicion/createposicion.component";
 
 @NgModule({
   imports: [
@@ -27,7 +28,8 @@ import { PosicionService } from "../../services/posicion.service";
     BarralateralComponent,
     ProductosComponent,
     PosicionesComponent,
-    CompanyComponent
+    CompanyComponent,
+    CreatePosicionComponent
   ],
   providers: [
     ProductService,

@@ -1,7 +1,7 @@
 export interface Company {
   id: number;
   cuit: string;
-  razonSocial: string;
+  Razon_Social: string;
   createdAt: string;
   updatedAt: string;
 }

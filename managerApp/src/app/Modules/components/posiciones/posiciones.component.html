@@ -1,25 +1,27 @@
+<button (click)="creaPosicion()">CREAR</button>
+
 <div class="d-flex flex-row bg-body-tertiary bg-gradient">
-    <div class="flex-grow-1 m-2 p-2">
-        <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>Empresa</th>
-                <th>Producto</th>
-                <th>Fecha de Entrega Inicio</th>
-                <th>Moneda</th>
-                <th>Precio</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let posicion of posiciones">
-                <td>{{ posicion.nombre_empresa }}</td>
-                <td>{{ posicion.nombre_producto }}</td>
-                <td>{{ posicion.fechaEntregaInicio }}</td>
-                <td>{{ posicion.moneda }}</td>
-                <td>{{ posicion.precio }}</td>
-              </tr>
-            </tbody>
-          </table>
-          
-    </div>
+  <div class="flex-grow-1 m-2 p-2">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Empresa</th>
+          <th>Producto</th>
+          <th>Fecha de Entrega Inicio</th>
+          <th>Moneda</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let posicion of posiciones">
+          <td>{{ posicion.nombre_empresa }}</td>
+          <td>{{ posicion.nombre_producto }}</td>
+          <td>{{ posicion.fechaEntregaInicio }}</td>
+          <td>{{ posicion.moneda }}</td>
+          <td>{{ posicion.precio }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
 </div>

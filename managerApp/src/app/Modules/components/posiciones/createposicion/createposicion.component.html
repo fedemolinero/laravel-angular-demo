@@ -1,0 +1,47 @@
+<form [formGroup]="posicionForm" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+  <div class="mb-3">
+    <label for="idEmpresa" class="form-label">Selecciona una empresa:</label>
+    <select id="idEmpresa" formControlName="idEmpresa" class="form-select" required>
+      <option *ngFor="let empresa of empresas" [value]="empresa.id">{{ empresa.Razon_Social }}</option>
+    </select>
+    <div class="invalid-feedback" *ngIf="posicionForm.get('idEmpresa')?.invalid && (posicionForm.get('idEmpresa')?.dirty || posicionForm.get('idEmpresa')?.touched)">
+      La empresa es requerida.
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="idProducto" class="form-label">Selecciona un producto:</label>
+    <select id="idProducto" formControlName="idProducto" class="form-select" required>
+      <option *ngFor="let producto of productos" [value]="producto.id">{{ producto.nombre }}</option>
+    </select>
+    <div class="invalid-feedback" *ngIf="posicionForm.get('idProducto')?.invalid && (posicionForm.get('idProducto')?.dirty || posicionForm.get('idProducto')?.touched)">
+      El producto es requerido.
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="precio" class="form-label">Precio:</label>
+    <input type="number" id="precio" formControlName="precio" class="form-control" required>
+    <div class="invalid-feedback" *ngIf="posicionForm.get('precio')?.invalid && (posicionForm.get('precio')?.dirty || posicionForm.get('precio')?.touched)">
+      El precio es requerido.
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="moneda" class="form-label">Moneda:</label>
+    <input type="text" id="moneda" formControlName="moneda" class="form-control" required>
+    <div class="invalid-feedback" *ngIf="posicionForm.get('moneda')?.invalid && (posicionForm.get('moneda')?.dirty || posicionForm.get('moneda')?.touched)">
+      La moneda es requerida.
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="fechaEntrega" class="form-label">Fecha de Entrega:</label>
+    <input type="date" id="fechaEntrega" formControlName="fechaEntrega" class="form-control" required>
+    <div class="invalid-feedback" *ngIf="posicionForm.get('fechaEntrega')?.invalid && (posicionForm.get('fechaEntrega')?.dirty || posicionForm.get('fechaEntrega')?.touched)">
+      La fecha de entrega es requerida.
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="posicionForm.invalid" class="btn btn-primary">Crear Posición</button>
+</form>

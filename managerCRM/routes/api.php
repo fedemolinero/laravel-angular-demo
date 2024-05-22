@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductosController;
 use App\Http\Controllers\PosicionesController;
+use App\Http\Controllers\EmpresasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 // Route::get('/productos', 'ProductosController@listarProductosOrdenados');
+Route::get('/empresas', [EmpresasController::class, 'index']);
+Route::get('/posiciones', [PosicionesController::class, 'index']);
 Route::get('/productos', [ProductosController::class, 'listarProductosOrdenados']);
 
-Route::get('/posiciones', [PosicionesController::class, 'index']);
+Route::post('/posiciones', [PosicionesController::class, 'store']);
+
