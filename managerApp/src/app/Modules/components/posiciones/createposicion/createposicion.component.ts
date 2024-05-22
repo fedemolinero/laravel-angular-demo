@@ -5,6 +5,7 @@ import { EmpresasService } from '../../../../services/empresas.service';
 import { Company } from '../../../../models/company.model';
 import { ProductService } from '../../../../services/product.service';
 import { Product } from '../../../../models/product.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-createposicion',
@@ -21,6 +22,7 @@ export class CreatePosicionComponent implements OnInit {
     private posicionService: PosicionService,
     private empresasService: EmpresasService,
     private productService: ProductService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -62,8 +64,7 @@ export class CreatePosicionComponent implements OnInit {
         .subscribe(
           {
             next: (response: any) => {
-
-              console.log(response)
+              this.router.navigate(['']);
             },
             error: (e) => console.error(e)
           }

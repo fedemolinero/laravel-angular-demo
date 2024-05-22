@@ -25,21 +25,17 @@ export class PosicionesComponent {
 
   ngOnInit(): void {
 
-      this.subscription.add(
-
-        this.posicionService.getPosicion()
-          .subscribe(
-            {
-              next: (posiciones: any) => {
-                this.posiciones = posiciones
-                console.log(posiciones)
-              },
-              error: (e) => console.error(e)
-            }
-          )
-
-
-      );
+    this.subscription.add(
+      this.posicionService.getPosicion()
+        .subscribe(
+          {
+            next: (posiciones: Posicion[]) => {
+              this.posiciones = posiciones
+            },
+            error: (e) => console.error(e)
+          }
+        )
+    );
   }
 
   creaPosicion() {
