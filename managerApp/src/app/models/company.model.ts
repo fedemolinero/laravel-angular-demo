@@ -1,11 +1,11 @@
 export interface Company {
   id: number;
-  nombre: string;
-  usoFrecuente: string;
+  cuit: string;
+  razonSocial: string;
   createdAt: string;
   updatedAt: string;
 }
 
 export interface CompanyResponse {
-  products: Company[];
+  company: Company[];
 }
