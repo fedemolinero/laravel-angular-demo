@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription, map } from 'rxjs';
-import { Router } from '@angular/router';
 import { ProductService } from '../../../services/product.service';
+import { Product } from '../../../models/product.model';
 
 @Component({
   selector: 'app-productos',
@@ -10,7 +10,7 @@ import { ProductService } from '../../../services/product.service';
 })
 export class ProductosComponent implements OnInit, OnDestroy {
 
-  products: string[] = [];
+  products: Product[] = [];
   private subscription: Subscription = new Subscription();
 
   constructor(
@@ -26,7 +26,7 @@ export class ProductosComponent implements OnInit, OnDestroy {
       this.productService.getProducts()
         .subscribe(
           {
-            next: (products: any) => {
+            next: (products: Product[]) => {
               this.products = products
             },
             error: (e) => console.error(e)

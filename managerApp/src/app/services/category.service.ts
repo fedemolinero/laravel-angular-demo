@@ -11,7 +11,7 @@ export class CategoryService {
   constructor(private http: HttpClient) { }
 
   getCategories(): Observable<string[]> {
-    return of(['MENU ITEM 1', 'MENU ITEM 2', 'MENU ITEM 3']);
+    return of(['MENU ITEM 1', 'MENU ITEM 2', 'MENU ITEM 3', 'MENU ITEM 4']);
     // return this.http.get<string[]>(this.apiUrl);
   }
 

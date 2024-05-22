@@ -1,10 +1,9 @@
 <div class="d-flex flex-row bg-body-tertiary bg-gradient">
     <div class="flex-grow-1 m-2 p-2">
-        <div *ngIf="!products">
-            {{products | json}}
-        </div>
-        <div *ngIf="!!products">
-            API OFF
+        <div *ngFor="let product of products">
+            <div class="col-12">
+                {{ product.id }} - {{ product.nombre }} - {{ product.usoFrecuente }}
+            </div>
         </div>
     </div>
 </div>

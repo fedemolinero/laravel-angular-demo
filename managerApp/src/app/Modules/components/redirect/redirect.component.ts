@@ -3,8 +3,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-redirect',
-  templateUrl: './redirect.component.html',
-  styleUrl: './redirect.component.scss'
+  template: '',
 })
 export class RedirectComponent implements OnInit {
 
