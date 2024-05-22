@@ -15,7 +15,6 @@ export class RedirectComponent implements OnInit {
   ngOnInit(): void {
 
     if (window.location.pathname === '/') {
-      console.log('its here')
       this.router.navigate(['/layout']);
     }
 
