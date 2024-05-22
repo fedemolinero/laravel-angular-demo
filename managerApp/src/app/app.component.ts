@@ -33,6 +33,7 @@ export class AppComponent implements OnInit {
     this.http.get<any>(this.url)
       .subscribe(
         (datax: any) => {
+          this.datos=datax
           console.log(datax)
         });
   }
