@@ -28,6 +28,7 @@ export class PosicionesComponent {
           {
             next: (posiciones: any) => {
               this.posiciones = posiciones
+              console.log(posiciones)
             },
             error: (e) => console.error(e)
           }
