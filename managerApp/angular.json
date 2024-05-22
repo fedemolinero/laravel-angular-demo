@@ -41,10 +41,8 @@
             ],
             "scripts": [],
             "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "prerender": false,
+            "ssr": false
           },
           "configurations": {
             "production": {
@@ -75,9 +73,6 @@
           "configurations": {
             "production": {
               "buildTarget": "managerApp:build:production"
-            },
-            "options": {
-              "proxyConfig": "src/proxy.conf.json"
             },
             "development": {
               "buildTarget": "managerApp:build:development"
