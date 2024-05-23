@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout.component';
-import { PosicionesComponent } from '../components/posiciones/posiciones.component';
-import { CompanyComponent } from '../components/company/company.component';
-import { ProductosComponent } from '../components/productos/productos.component';
-import { CreatePosicionComponent } from '../components/posiciones/createposicion/createposicion.component';
+import { CompanyComponent } from '../../empresasModule/company/company.component';
+import { CreatePosicionComponent } from '../../posicionesModule/components/posiciones/createposicion/createposicion.component';
+import { PosicionesComponent } from '../../posicionesModule/components/posiciones/posiciones.component';
+import { ProductosComponent } from '../../productosModule/components/productos/productos.component';
 
 const routes: Routes = [
   { path: '', component: LayoutComponent },

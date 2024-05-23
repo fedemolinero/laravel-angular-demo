@@ -67,7 +67,7 @@ export class CreatePosicionComponent implements OnInit, OnDestroy {
       idProducto: ['', [Validators.required]],
       fechaEntrega: ['', [Validators.required]],
       moneda: ['USD', [Validators.required]],
-      precio: ['', [Validators.required, Validators.min(0)]],
+      precio: ['0', [Validators.required, Validators.min(0)]],
     });
   }
 
