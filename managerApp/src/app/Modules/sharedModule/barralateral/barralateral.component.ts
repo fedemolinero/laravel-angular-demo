@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { CategoryService } from '../../../services/category.service';
+import { CategoryService } from '../services/category.service';
 import { Router } from '@angular/router';
 import { Subscription, map } from 'rxjs';
 
@@ -40,10 +40,6 @@ export class BarralateralComponent implements OnInit, OnDestroy {
         )
     );
   }
-
-  // goBack() {
-  //   this.router.navigate(['']);
-  // }
 
   goEmpresas() {
     this.router.navigate(['empresas']);

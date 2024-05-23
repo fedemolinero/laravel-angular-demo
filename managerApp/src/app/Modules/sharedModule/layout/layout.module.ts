@@ -4,15 +4,15 @@ import { CommonModule } from "@angular/common";
 import { HttpClientModule, provideHttpClient, withFetch } from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { LayoutComponent } from './layout.component';
+import { CompanyComponent } from "../../empresasModule/company/company.component";
+import { CreatePosicionComponent } from "../../posicionesModule/components/posiciones/createposicion/createposicion.component";
+import { PosicionesComponent } from "../../posicionesModule/components/posiciones/posiciones.component";
+import { PosicionService } from "../../posicionesModule/services/posicion.service";
+import { ProductosComponent } from "../../productosModule/components/productos/productos.component";
+import { BarralateralComponent } from "../barralateral/barralateral.component";
+import { CategoryService } from "../services/category.service";
 import { LayoutRoutingModule } from "./layout-routing.module";
-import { CategoryService } from "../../services/category.service";
-import { ProductosComponent } from "../components/productos/productos.component";
-import { ProductService } from "../../services/product.service";
-import { BarralateralComponent } from "../components/barralateral/barralateral.component";
-import { PosicionesComponent } from "../components/posiciones/posiciones.component";
-import { CompanyComponent } from "../components/company/company.component";
-import { PosicionService } from "../../services/posicion.service";
-import { CreatePosicionComponent } from "../components/posiciones/createposicion/createposicion.component";
+import { ProductService } from "../../productosModule/services/product.service";
 
 @NgModule({
   imports: [

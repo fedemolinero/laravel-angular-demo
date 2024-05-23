@@ -16,10 +16,10 @@ class ProductosController extends Controller {
         // Retornar los productos como JSON
         return response()->json( $productos );
 
-         // Convertir la colección de productos a un arreglo asociativo
+        // Convertir la colección de productos a un arreglo asociativo
         //  $productosArray = $productos->toArray();
 
-         // Retornar el arreglo de productos
+        // Retornar el arreglo de productos
         //  return $productosArray;
     }
 

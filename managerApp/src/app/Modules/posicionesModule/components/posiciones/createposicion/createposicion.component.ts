@@ -1,12 +1,12 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { PosicionService } from '../../../../services/posicion.service';
-import { EmpresasService } from '../../../../services/empresas.service';
-import { Company } from '../../../../models/company.model';
-import { ProductService } from '../../../../services/product.service';
-import { Product } from '../../../../models/product.model';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { Product } from '../../../../productosModule/models/product.model';
+import { Company } from '../../../../empresasModule/models/company.model';
+import { PosicionService } from '../../../services/posicion.service';
+import { EmpresasService } from '../../../../empresasModule/empresas.service';
+import { ProductService } from '../../../../productosModule/services/product.service';
 
 @Component({
   selector: 'app-createposicion',
@@ -20,7 +20,6 @@ export class CreatePosicionComponent implements OnInit, OnDestroy {
 
   private empresasSubscription: Subscription = new Subscription();
   private productosSubscription: Subscription = new Subscription();
-
 
   constructor(
     private formBuilder: FormBuilder,

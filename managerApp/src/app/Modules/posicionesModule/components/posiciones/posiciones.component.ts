@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { Posicion } from '../../../models/posicion.model';
-import { PosicionService } from '../../../services/posicion.service';
 import { Subscription } from 'rxjs';
 import { Router } from '@angular/router';
+import { PosicionService } from '../../services/posicion.service';
+import { Posicion } from '../../models/posicion.model';
 
 @Component({
   selector: 'app-posiciones',
@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class PosicionesComponent {
 
   posiciones: Posicion[] = [];
-  private subscription: Subscription = new Subscription();
+  private posicionSubscription: Subscription = new Subscription();
 
   constructor(
     private posicionService: PosicionService,
@@ -20,12 +20,12 @@ export class PosicionesComponent {
   ) { }
 
   ngOnDestroy(): void {
-    this.subscription.unsubscribe();
+    this.posicionSubscription.unsubscribe();
   }
 
   ngOnInit(): void {
 
-    this.subscription.add(
+    this.posicionSubscription.add(
       this.posicionService.getPosicion()
         .subscribe(
           {
