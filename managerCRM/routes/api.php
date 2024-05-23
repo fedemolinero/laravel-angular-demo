@@ -2,9 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductosController;
-use App\Http\Controllers\PosicionesController;
-use App\Http\Controllers\EmpresasController;
+use App\Modules\Productos\Controllers\ProductosController;
+use App\Modules\Empresas\Controllers\EmpresasController;
+use App\Modules\Posiciones\Controllers\PosicionesController;
 
 /*
 |--------------------------------------------------------------------------

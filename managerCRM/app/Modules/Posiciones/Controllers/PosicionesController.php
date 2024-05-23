@@ -1,13 +1,20 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Modules\Posiciones\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Posiciones;
-use App\Models\Empresas;
+use App\Modules\Posiciones\Models\Posiciones;
+use App\Modules\Empresas\Models\Empresas;
 
-class PosicionesController extends Controller
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Routing\Controller as BaseController;
+
+class PosicionesController extends BaseController
  {
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
     /**
     * Display a listing of the resource.
     *

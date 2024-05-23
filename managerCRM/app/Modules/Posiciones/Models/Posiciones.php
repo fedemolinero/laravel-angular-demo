@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Models;
+namespace App\Modules\Posiciones\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Productos;
-use App\Models\Empresas;
+
+use App\Modules\Empresas\Models\Empresas;
+use App\Modules\Productos\Models\Productos;
 
 
 class Posiciones extends Model

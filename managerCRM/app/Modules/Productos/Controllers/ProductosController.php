@@ -1,11 +1,18 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Modules\Productos\Controllers;
 
-use App\Models\Productos;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Routing\Controller as BaseController;
+
+use App\Modules\Productos\Models\Productos;
 use Illuminate\Http\Request;
 
-class ProductosController extends Controller {
+class ProductosController extends BaseController {
+
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     // Método para listar productos ordenados por 'usoFrecuente'
 
