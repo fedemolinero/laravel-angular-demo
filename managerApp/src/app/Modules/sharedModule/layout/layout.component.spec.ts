@@ -1,9 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LayoutComponent } from './layout.component';
-import { BarralateralComponent } from '../components/barralateral/barralateral.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { PosicionesComponent } from '../components/posiciones/posiciones.component';
+import { BarralateralComponent } from '../barralateral/barralateral.component';
+import { PosicionesComponent } from '../../posicionesModule/components/posiciones/posiciones.component';
 
 describe('LayoutComponent', () => {
   let component: LayoutComponent;

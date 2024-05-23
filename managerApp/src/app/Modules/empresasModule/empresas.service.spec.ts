@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
-import { EmpresasService } from '../../services/empresas.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { EmpresasService } from './empresas.service';
 
 
 describe('EmpresasService', () => {
