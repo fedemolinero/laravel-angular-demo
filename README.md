@@ -9,9 +9,11 @@ XAMPP para Windows con instaladores: <https://www.apachefriends.org/es/index.htm
 
 Iniciar XAMPP como administrador e iniciar servicios de APACHE Y MYSQL;
 
-### CREAR DATABASE
+### EJECUTAR INSTALADOR
 
-- C:\xampp\mysql\bin\mysql -u root -e "CREATE DATABASE manager;"
+Ejecutar el archivo instalar.bat y se crearan la bbdd, tablas e informacion para la aplciacion.
+Al finalizar iniciara la app, para comprobar inicie el navegador en la direccion configurada.
+Ejemplo: <http://127.0.0.1:8000/api/productos> deberia mostrar el listado de productos
 
 ## CRM INTEGRADO CON MERCADO DE GRANOS
 
