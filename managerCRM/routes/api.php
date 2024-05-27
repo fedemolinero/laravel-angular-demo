@@ -4,6 +4,7 @@ use App\Modules\Empresas\Controllers\EmpresasController;
 use App\Modules\Posiciones\Controllers\PosicionesController;
 use App\Modules\Productos\Controllers\ProductosController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,8 +18,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/install', function () {
+    Artisan::call('migrate');
+    Artisan::call('db:seed --class=ProductosSeeder');
+    Artisan::call('db:seed --class=EmpresasTableSeeder');
+    Artisan::call('db:seed --class=PosicionesTableSeeder');
+
+    return 'Instalación completada';
 });
 
 Route::get('/empresas', [EmpresasController::class, 'index']);
