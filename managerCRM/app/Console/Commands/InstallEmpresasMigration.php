@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Artisan;
 class InstallEmpresasMigration extends Command
 {
     protected $signature = 'install:empresas-migration';
+
     protected $description = 'Instala la migración para la tabla empresasos';
 
     public function handle()

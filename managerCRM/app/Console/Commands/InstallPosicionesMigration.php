@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Artisan;
 class InstallPosicionesMigration extends Command
 {
     protected $signature = 'install:posiciones-migration';
+
     protected $description = 'Instala la migración para la tabla posicionos';
 
     public function handle()

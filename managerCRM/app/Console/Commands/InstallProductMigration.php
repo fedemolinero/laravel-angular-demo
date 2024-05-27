@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Artisan;
 class InstallProductMigration extends Command
 {
     protected $signature = 'install:product-migration';
+
     protected $description = 'Instala la migración para la tabla productos';
 
     public function handle()
