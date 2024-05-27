@@ -3,7 +3,6 @@
 use App\Modules\Empresas\Controllers\EmpresasController;
 use App\Modules\Posiciones\Controllers\PosicionesController;
 use App\Modules\Productos\Controllers\ProductosController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
