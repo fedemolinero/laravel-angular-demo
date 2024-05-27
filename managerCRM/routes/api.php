@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
-use App\Modules\Productos\Controllers\ProductosController;
 use App\Modules\Empresas\Controllers\EmpresasController;
 use App\Modules\Posiciones\Controllers\PosicionesController;
+use App\Modules\Productos\Controllers\ProductosController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +25,3 @@ Route::get('/empresas', [EmpresasController::class, 'index']);
 Route::get('/productos', [ProductosController::class, 'listarProductosOrdenados']);
 Route::get('/posiciones', [PosicionesController::class, 'index']);
 Route::post('/posiciones', [PosicionesController::class, 'store']);
-
